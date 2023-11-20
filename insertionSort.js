@@ -2,7 +2,7 @@
 // comparing each element to its left and then swap
 
 function insertionSort() {
-  for (i = 0; i < arr.length; i++) {
+  for (i = 1; i < arr.length; i++) {
     let currentValue = arr[i];
     j = i - 1;
     while (j >= 0 && arr[j] > currentValue) {

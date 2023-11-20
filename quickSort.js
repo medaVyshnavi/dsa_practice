@@ -1,21 +1,23 @@
+// avg case complexity O(nlogn)
+// worst case complexity O(n^2) , if we are sorting an already sorted array
+
 function quickSort(arr) {
+  if (arr.length < 2) {
+    return arr;
+  }
   let pivotElement = arr[arr.length - 1];
   let leftArray = [];
   let rightArray = [];
-  let i = 0;
-  while (arr.length > 0) {
+
+  for (i = 0; i < arr.length - 1; i++) {
     if (arr[i] > pivotElement) {
       rightArray.push(arr[i]);
     } else {
       leftArray.push(arr[i]);
     }
-    arr.splice(arr[i], 1);
-    i = i + 1;
-    console.log(leftArray, rightArray);
   }
-  return [...leftArray, ...rightArray];
+  return [...quickSort(leftArray), pivotElement, ...quickSort(rightArray)];
 }
 
 const arr = [-6, 20, 8, -4, 2];
-quickSort(arr);
-console.log(arr);
+console.log(quickSort(arr));
