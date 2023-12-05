@@ -12,4 +12,4 @@ function towerOfHanoi(n, fromRod, toRod, usingRod) {
   towerOfHanoi(n - 1, usingRod, toRod, fromRod);
 }
 
-towerOfHanoi(1, "A", "C", "B");
+towerOfHanoi(1, "A", "C", "b");
