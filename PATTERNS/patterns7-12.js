@@ -69,6 +69,8 @@ pattern9();
 //**
 //*
 
-function pattern10(n) {}
+function pattern10(n) {
+  for (i = 0; i <= 2 * n - 1; i++) {}
+}
 
 pattern10(3);
