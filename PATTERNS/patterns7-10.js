@@ -70,7 +70,13 @@ pattern9();
 //*
 
 function pattern10(n) {
-  for (i = 0; i <= 2 * n - 1; i++) {}
+  for (i = 0; i <= 2 * n - 1; i++) {
+    let stars = i < n ? i : 2 * n - i;
+    for (j = 0; j < stars; j++) {
+      console.log("*");
+    }
+    console.log("\n");
+  }
 }
 
-pattern10(3);
+pattern10(4);
