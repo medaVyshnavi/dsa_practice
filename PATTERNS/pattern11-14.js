@@ -75,3 +75,44 @@ function pattern14(n) {
   }
 }
 pattern14(5);
+
+// A B C D E
+// A B C D
+// A B C
+// A B
+// A
+
+function pattern15(n) {
+  for (let i = 0; i < n; i++) {
+    let char = 1;
+    for (let j = 0; j < n - i; j++) {
+      console.log(String.fromCharCode(char + 64));
+      char++;
+    }
+    console.log("\n");
+  }
+}
+pattern15(5);
+
+// A
+// B B
+// C C C
+// D D D D
+// E E E E E
+
+function pattern16(n) {
+  let num = 1;
+  for (let i = 0; i < n; i++) {
+    for (let j = 0; j <= i; j++) {
+      console.log(String.fromCharCode(num + 64));
+    }
+    num++;
+    console.log("\n");
+  }
+}
+pattern16(5);
+
+//   A
+//  ABA
+// ABCBA
+//ABCDCBA
