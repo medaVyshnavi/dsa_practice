@@ -116,3 +116,26 @@ pattern16(5);
 //  ABA
 // ABCBA
 //ABCDCBA
+
+function pattern17(n) {
+  for (let i = 0; i < n; i++) {
+    let char = 1;
+    for (let j = 0; j < n - i - 1; j++) {
+      console.log(" ");
+    }
+    for (let j = 0; j < i + 1; j++) {
+      console.log(String.fromCharCode(char + 64));
+      char++;
+    }
+    char--;
+    for (let j = 0; j < i; j++) {
+      char--;
+      console.log(String.fromCharCode(char + 64));
+    }
+    for (let j = 0; j < n - i - 1; j++) {
+      console.log(" ");
+    }
+  }
+}
+
+pattern17(5);
