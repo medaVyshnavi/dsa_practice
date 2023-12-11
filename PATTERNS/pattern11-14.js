@@ -139,3 +139,21 @@ function pattern17(n) {
 }
 
 pattern17(5);
+
+// E
+// D E
+// C D E
+// B C D E
+// A B C D E
+
+function pattern18(n) {
+  for (i = 0; i < n; i++) {
+    let char = n;
+    for (let j = i; j >= 0; j--) {
+      console.log(String.fromCharCode(char + 64 - j));
+    }
+    console.log("\n");
+  }
+}
+
+pattern18(5);
