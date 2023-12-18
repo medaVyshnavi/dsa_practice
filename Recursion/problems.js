@@ -56,3 +56,32 @@ function factorialNumber(n) {
 
 const factorial = factorialNumber(6);
 console.log(factorial);
+
+// reverse an array using recursion
+let arr = [5, 4, 3, 2, 1];
+let reverseArray = (arr, i, length) => {
+  if (i >= length / 2) {
+    console.log(arr);
+    return;
+  }
+  [arr[i], arr[length - i - 1]] = [arr[length - i - 1], arr[i]];
+  reverseArray(arr, i + 1, length);
+};
+
+reverseArray(arr, 0, arr.length);
+
+// check if a string is palindrome using recursion
+let string = "MADAM";
+function checkPalindrome(arr, i, length) {
+  if (i >= length / 2) {
+    console.log(true);
+    return;
+  }
+  if (arr[i] !== arr[length - i - 1]) {
+    console.log(false);
+    return;
+  }
+  checkPalindrome(arr, i + 1, length);
+}
+
+checkPalindrome(Array.from(string), 0, string.length);
