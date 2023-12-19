@@ -85,3 +85,11 @@ function checkPalindrome(arr, i, length) {
 }
 
 checkPalindrome(Array.from(string), 0, string.length);
+
+// fibonacci number using recursion
+function fibonacchi(n) {
+  if (n < 2) return n;
+  return fibonacchi(n - 1) + fibonacchi(n - 2);
+}
+
+console.log(fibonacchi(4));
