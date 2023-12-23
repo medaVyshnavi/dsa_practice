@@ -15,4 +15,4 @@ function bubbleSort(arr) {
   return arr;
 }
 
-bubbleSort([8, 20, -2, -4, 6]);
+bubbleSort([8, 20, -2, -4, 6, 2]);
