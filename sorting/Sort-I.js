@@ -50,3 +50,16 @@ const arr2 = [1, 2, 3, 4, 5, 6];
 console.log(bubbleSort(arr2));
 
 /* ---------------------------------Insertion Sort---------------------------------------------------- */
+
+function insertionSort(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    let j = i;
+    while (j > 0 && arr[j - 1] > arr[j]) {
+      [arr[j], arr[j - 1]] = [arr[j - 1], arr[j]];
+      j--;
+    }
+  }
+  return arr;
+}
+
+console.log(insertionSort([6, 2, 5, 3, 1, 3]));
