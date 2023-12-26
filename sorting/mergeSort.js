@@ -1,5 +1,6 @@
 /** --------------------------------- Merge Sort ------------------------ */
-
+// Time Complexity O(nlogn)
+// Space Complexity O(n)
 function mergeSort(arr, low, high) {
   if (low >= high) return;
   let mid = Math.floor((low + high) / 2);
