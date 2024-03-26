@@ -9,4 +9,4 @@ function isArraySorted(arr) {
 
 const arr1 = [2, 3, 1, 3, 4, 5, 6];
 const arr2 = [2, 3, 4, 5, 6, 7, 8];
-isArraySorted(arr);
+isArraySorted(arr1);
