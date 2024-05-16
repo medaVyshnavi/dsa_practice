@@ -11,7 +11,7 @@ printName(1, 5);
 function printNumbers(i, n) {
   if (i > n) return;
   console.log(i);
-  printNumbers(1 + 1, n);
+  printNumbers(i + 1, n);
 }
 printNumbers(1, 10);
 

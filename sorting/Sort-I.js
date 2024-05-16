@@ -25,8 +25,24 @@ function bubbleSort(arr) {
   return arr;
 }
 
-const arr1 = [9, 13, 20, 24, 2];
-console.log(bubbleSort(arr1));
+const arr5 = [9, 13, 20, 24, 2];
+console.log(bubbleSort(arr5));
+
+// BUBBLE SORT
+
+function bubbleItems(arr,n) {
+  for(let i=n-1;i>=0;i--){
+    for(let j=0;j<=i-1;j++){
+      if(arr[j] > arr[j+1]){
+        [arr[j],arr[j+1]] = [arr[j+1],arr[j]]
+      }
+    }
+  }
+    return arr
+}
+
+let arr1 = [6, 2, 5, 3, 1, 3]
+console.log(bubbleItems(arr1,arr1.length));
 
 // for Best time complexity only
 function bubbleSort(arr) {
