@@ -19,3 +19,19 @@ function findLargest (arr) {
 }
 
 console.log(findLargest(num))
+
+
+// remove duplicates from a SORTED array (two pointer approach)
+function removeDuplicates (arr) {
+  let i = 0;
+  for (j=i;j<arr.length;i++){
+    if (arr[j] != arr[i]) {
+      arr[i+1] = arr[j]
+      i++
+    }
+  }
+  return i+1
+}
+
+let arr = [1,1,1,1,2,5,7,7,7,7,8]
+removeDuplicates(arr)
