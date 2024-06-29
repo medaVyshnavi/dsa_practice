@@ -23,7 +23,7 @@ function getTwoSum(arr, target) {
   let mapp = new Map();
   for (let i = 0; i < arr.length; i++) {
     let more = target - arr[i];
-    if (mapp.get(more)) return "YES"; // return [mapp.get(more),i]
+    if (mapp.get(more) !== undefined) return "YES"; // return [mapp.get(more),i]
     mapp.set(arr[i], i);
   }
   return "NO"; // return [-1,-1]
